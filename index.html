@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Perdão ❤️</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg,#ff0000,#ff4d4d,#000000);
+    background-size: 600% 600%;
+    animation: fundo 10s infinite alternate;
+    color: white;
+    text-align: center;
+}
+
+@keyframes fundo {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+header {
+    font-size: 45px;
+    padding: 30px;
+    text-shadow: 0 0 20px red;
+}
+
+.box {
+    width: 80%;
+    margin: auto;
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px red;
+}
+
+p {
+    font-size: 22px;
+    line-height: 1.7;
+}
+
+.amor {
+    font-size: 60px;
+    color: red;
+    animation: brilho 1s infinite alternate;
+}
+
+@keyframes brilho {
+    from {text-shadow: 0 0 10px red;}
+    to {text-shadow: 0 0 30px white;}
+}
+
+.frases {
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+footer {
+    margin-top: 40px;
+    opacity: 0.8;
+}
+
+/* corações */
+
+.heart {
+    position: fixed;
+    top: -10px;
+    font-size: 20px;
+    animation: cair linear infinite;
+}
+
+@keyframes cair {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+Perdão ❤️
+</header>
+
+<div class="box">
+
+<p>
+Desculpa, fui um otário comigo mesmo e com você.<br><br>
+
+Quero te pedir perdão de verdade por tudo que eu falei ou pensei.<br><br>
+
+Nossa relação pra mim é muito especial e muito adorável.<br><br>
+
+Eu não quero te perder, você é importante pra mim.
+</p>
+
+<div class="amor">
+EU TE AMO ❤️
+</div>
+
+<div class="frases">
+<p>Você é a melhor parte do meu dia</p>
+<p>Seu sorriso me faz feliz</p>
+<p>Com você tudo fica melhor</p>
+<p>Eu quero você comigo sempre</p>
+<p>Nosso jeito é único</p>
+</div>
+
+<button onclick="alert('Eu te amo de verdade ❤️')">
+Clique aqui ❤️
+</button>
+
+</div>
+
+<footer>
+Feito com amor ❤️
+</footer>
+
+
+<!-- musica leve -->
+
+<audio autoplay loop>
+<source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_7b4b8c6f1b.mp3?filename=soft-piano-ambient-110624.mp3">
+</audio>
+
+
+<script>
+
+function criarCoracao(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{heart.remove();},5000);
+}
+
+setInterval(criarCoracao,300);
+
+</script>
+
+</body>
+</html>
